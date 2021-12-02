@@ -22,12 +22,12 @@ import lombok.ToString;
 public class Cart extends AbstractEntity {
 
     @ManyToOne
-    private final Customer customer;
+    private Customer customer;
 
     @NotNull
     @Column (nullable = false)
     @Enumerated (EnumType.STRING)
-    private final CartStatus status;
+    private CartStatus status;
 
     public Cart(Customer customer, @NotNull CartStatus status) {
         this.customer = customer;

@@ -1,0 +1,25 @@
+image: docker.pkg.dev.vm.co.mz/build-java-11
+
+variables:
+  MAVEN_CLI_OPTS: "-s maven-settings.xml --batch-mode"
+
+stages:
+  - test
+  - package
+
+maven-test:
+  stage: test
+  script:
+    - mvn clean test $MAVEN_CLI_OPTS
+  artifacts:
+    paths:
+      - target
+
+maven-package:
+  stage: package
+  needs: ["maven-test"]
+  script:
+    - mvn package $MAVEN_CLI_OPTS
+  artifacts:
+    paths:
+      - target

@@ -1,4 +1,4 @@
-package mz.co.muianga.resources.model;
+package mz.co.muianga.resources.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CartDto {
-
+public class ReviewDto {
     private Long id;
-    private CustomerDto customerDto;
-    private String status;
+    private String title;
+    private String description;
+    private Long rating;
 }
