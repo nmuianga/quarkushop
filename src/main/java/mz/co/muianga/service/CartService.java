@@ -31,7 +31,7 @@ public class CartService {
                 .collect(Collectors.toList());
     }
 
-    public List<CartDto> listActiveCarts() {
+    public List<CartDto> findAllActiveCarts() {
         return cartRepository
                 .findByStatus(CartStatus.NEW)
                 .stream()

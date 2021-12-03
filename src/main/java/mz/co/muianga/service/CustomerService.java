@@ -45,7 +45,6 @@ public class CustomerService {
     public CustomerDto findById(Long id) {
         log.debug("Request to get Customer : {}", id);
         return customerRepository.findById(id)
-                .stream()
                 .map(CustomerService::mapToDto)
                 .orElse(null);
     }

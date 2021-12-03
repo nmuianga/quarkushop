@@ -84,6 +84,10 @@ public class OrderService {
         orderRepository.delete(order);
     }
 
+    public boolean existsById(Long id) {
+        return this.orderRepository.existsById(id);
+    }
+
     public static OrderDto mapToDto(Order order) {
         Set<OrderItemDto> orderItems = order.getOrderItems()
                 .stream()

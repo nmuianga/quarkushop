@@ -10,6 +10,7 @@ import mz.co.muianga.model.Category;
 import mz.co.muianga.resources.dto.CategoryDto;
 import mz.co.muianga.repository.CategoryRepository;
 import mz.co.muianga.repository.ProductRepository;
+import mz.co.muianga.resources.dto.ProductDto;
 
 @Slf4j
 @ApplicationScoped
