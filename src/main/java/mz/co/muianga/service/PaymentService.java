@@ -27,7 +27,7 @@ public class PaymentService {
     OrderRepository orderRepository;
 
     public List<PaymentDto> findByPriceRange(Double max) {
-        return paymentRepository.findAllAmountBetween(BigDecimal.ZERO, BigDecimal.valueOf(max))
+        return paymentRepository.findAllByAmountBetween(BigDecimal.ZERO, BigDecimal.valueOf(max))
                 .stream()
                 .map(payment -> mapToDto(payment,
                         findOrderByPaymentId(payment.getId()).getId()))

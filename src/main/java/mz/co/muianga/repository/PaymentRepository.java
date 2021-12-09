@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment, Long> {
 
-    List<Payment> findAllAmountBetween(BigDecimal min, BigDecimal max);
+    List<Payment> findAllByAmountBetween(BigDecimal min, BigDecimal max);
 }
