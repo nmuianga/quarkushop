@@ -98,4 +98,4 @@ modules.xml
 
 .env
 
-target/*
+target
