@@ -9,8 +9,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import mz.co.muianga.quarkushop.resources.dto.OrderDto;
 import mz.co.muianga.quarkushop.service.OrderService;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/orders")
+@Tag(name = "order", description = "All order methods")
 public class OrderResource {
 
     @Inject

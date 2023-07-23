@@ -9,8 +9,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import mz.co.muianga.quarkushop.resources.dto.CustomerDto;
 import mz.co.muianga.quarkushop.service.CustomerService;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/customers")
+@Tag(name = "customer", description = "All customer methods")
 public class CustomerResource {
 
     @Inject

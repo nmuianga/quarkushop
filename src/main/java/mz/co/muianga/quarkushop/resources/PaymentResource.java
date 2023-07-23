@@ -9,8 +9,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import mz.co.muianga.quarkushop.resources.dto.PaymentDto;
 import mz.co.muianga.quarkushop.service.PaymentService;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/payments")
+@Tag(name = "payment", description = "All payment methods")
 public class PaymentResource {
 
     @Inject

@@ -10,8 +10,10 @@ import javax.ws.rs.PathParam;
 import mz.co.muianga.quarkushop.resources.dto.CategoryDto;
 import mz.co.muianga.quarkushop.resources.dto.ProductDto;
 import mz.co.muianga.quarkushop.service.CategoryService;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/categories")
+@Tag(name = "category", description = "All category methods")
 public class CategoryResource {
 
     @Inject

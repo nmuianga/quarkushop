@@ -9,8 +9,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import mz.co.muianga.quarkushop.resources.dto.CartDto;
 import mz.co.muianga.quarkushop.service.CartService;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/carts")
+@Tag(name = "cart", description = "All cart methods")
 public class CartResource {
 
     @Inject

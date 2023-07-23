@@ -9,8 +9,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import mz.co.muianga.quarkushop.resources.dto.ReviewDto;
 import mz.co.muianga.quarkushop.service.ReviewService;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Path("/reviews")
+@Tag(name = "review", description = "All review methods")
 public class ReviewResource {
 
     @Inject
