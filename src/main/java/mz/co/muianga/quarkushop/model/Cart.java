@@ -25,7 +25,7 @@ public class Cart extends AbstractEntity {
     private Customer customer;
 
     @NotNull
-    @Column (nullable = false)
+    @Column (nullable = false, name = "status")
     @Enumerated (EnumType.STRING)
     private CartStatus status;
 

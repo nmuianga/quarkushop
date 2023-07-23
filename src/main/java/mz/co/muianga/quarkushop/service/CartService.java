@@ -69,7 +69,7 @@ public class CartService {
 
         Cart cart = this.cartRepository.findById(id)
                 .orElseThrow(() -> new IllegalStateException("Cannot find Cart with id " + id));
-        cart.setStatus(CartStatus.CANDELED);
+        cart.setStatus(CartStatus.CANCELED);
         this.cartRepository.save(cart);
     }
 
