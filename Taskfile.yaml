@@ -1,0 +1,9 @@
+version: '3'
+
+
+dotenv: ['.env']
+
+tasks:
+  static-analyze:
+    cmds:
+      - mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=nmuianga_quarkushop
