@@ -7,6 +7,8 @@ import mz.co.muianga.quarkushop.resources.dto.AddressDto;
 @ApplicationScoped
 public class AddressService {
 
+    private AddressService(){}
+
     public static Address createFromDto(AddressDto addressDto) {
         return new Address(addressDto.getAddress1(),
                 addressDto.getAddress2(),

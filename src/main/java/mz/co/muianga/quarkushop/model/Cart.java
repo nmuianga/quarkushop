@@ -12,7 +12,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Getter
 @Setter
